@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa8429ab-50e9-44a8-860b-e40b1a6be8ed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:60561/GFSMaster.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GFSMaster.wsdl" MetadataType="Wsdl" ID="e3158f76-b289-444a-be38-09d361fa83f2" SourceId="1" SourceUrl="http://localhost:60561/GFSMaster.svc?wsdl" />
+    <MetadataFile FileName="GFSMaster1.xsd" MetadataType="Schema" ID="2e0dc43a-ed92-4679-95ba-d0be62fb16ad" SourceId="1" SourceUrl="http://localhost:60561/GFSMaster.svc?xsd=xsd0" />
+    <MetadataFile FileName="GFSMaster.disco" MetadataType="Disco" ID="b44a6de4-1459-4d78-9af5-6a73ea3ce13c" SourceId="1" SourceUrl="http://localhost:60561/GFSMaster.svc?disco" />
+    <MetadataFile FileName="GFSMaster2.xsd" MetadataType="Schema" ID="ddc5faa6-a346-42ba-82f1-a0c4e65ca226" SourceId="1" SourceUrl="http://localhost:60561/GFSMaster.svc?xsd=xsd2" />
+    <MetadataFile FileName="GFSMaster3.xsd" MetadataType="Schema" ID="49aed98e-0b1c-4bcb-8cfd-6e88924d2528" SourceId="1" SourceUrl="http://localhost:60561/GFSMaster.svc?xsd=xsd3" />
+    <MetadataFile FileName="GFSMaster.xsd" MetadataType="Schema" ID="e0751ff7-944f-49e0-ab6b-51bf01e58bf9" SourceId="1" SourceUrl="http://localhost:60561/GFSMaster.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

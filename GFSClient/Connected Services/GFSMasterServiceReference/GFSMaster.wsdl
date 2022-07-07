@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GFSMaster" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:60561/GFSMaster.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:60561/GFSMaster.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:60561/GFSMaster.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://localhost:60561/GFSMaster.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGFSMaster_Get_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Get_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogs" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetChunkTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChunkTable" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetChunkTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChunkTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Write_GetChunkUuidAndChunkServerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:Write_GetChunkUuidAndChunkServerId" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Write_GetChunkUuidAndChunkServerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Write_GetChunkUuidAndChunkServerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_WriteFileInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:WriteFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_WriteFileInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WriteFileInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Read_GetChunkUuidAndChunkServerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:Read_GetChunkUuidAndChunkServerId" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Read_GetChunkUuidAndChunkServerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Read_GetChunkUuidAndChunkServerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetNumOfChunks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumOfChunks" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetNumOfChunks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNumOfChunksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetAllFileInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetAllFileInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFileInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_AddChunkServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddChunkServer" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_AddChunkServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddChunkServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Exists_InputMessage">
+    <wsdl:part name="parameters" element="tns:Exists" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Exists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetFileTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileTable" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetFileTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetDeletedFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeletedFile" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetDeletedFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeletedFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetChunkServerId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChunkServerId" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetChunkServerId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChunkServerIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetLengthOfFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLengthOfFile" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_GetLengthOfFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLengthOfFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_AddBackUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBackUp" />
+  </wsdl:message>
+  <wsdl:message name="IGFSMaster_AddBackUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBackUpResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGFSMaster">
+    <wsdl:operation name="Get">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/Get" message="tns:IGFSMaster_Get_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetResponse" message="tns:IGFSMaster_Get_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetLogs" message="tns:IGFSMaster_GetLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetLogsResponse" message="tns:IGFSMaster_GetLogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChunkTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetChunkTable" message="tns:IGFSMaster_GetChunkTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetChunkTableResponse" message="tns:IGFSMaster_GetChunkTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Write_GetChunkUuidAndChunkServerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/Write_GetChunkUuidAndChunkServerId" message="tns:IGFSMaster_Write_GetChunkUuidAndChunkServerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/Write_GetChunkUuidAndChunkServerIdResponse" message="tns:IGFSMaster_Write_GetChunkUuidAndChunkServerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WriteFileInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/WriteFileInfo" message="tns:IGFSMaster_WriteFileInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/WriteFileInfoResponse" message="tns:IGFSMaster_WriteFileInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Read_GetChunkUuidAndChunkServerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/Read_GetChunkUuidAndChunkServerId" message="tns:IGFSMaster_Read_GetChunkUuidAndChunkServerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/Read_GetChunkUuidAndChunkServerIdResponse" message="tns:IGFSMaster_Read_GetChunkUuidAndChunkServerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNumOfChunks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetNumOfChunks" message="tns:IGFSMaster_GetNumOfChunks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetNumOfChunksResponse" message="tns:IGFSMaster_GetNumOfChunks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFileInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetAllFileInfo" message="tns:IGFSMaster_GetAllFileInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetAllFileInfoResponse" message="tns:IGFSMaster_GetAllFileInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddChunkServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/AddChunkServer" message="tns:IGFSMaster_AddChunkServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/AddChunkServerResponse" message="tns:IGFSMaster_AddChunkServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/Exists" message="tns:IGFSMaster_Exists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/ExistsResponse" message="tns:IGFSMaster_Exists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/Delete" message="tns:IGFSMaster_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/DeleteResponse" message="tns:IGFSMaster_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetFileTable" message="tns:IGFSMaster_GetFileTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetFileTableResponse" message="tns:IGFSMaster_GetFileTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletedFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetDeletedFile" message="tns:IGFSMaster_GetDeletedFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetDeletedFileResponse" message="tns:IGFSMaster_GetDeletedFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChunkServerId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetChunkServerId" message="tns:IGFSMaster_GetChunkServerId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetChunkServerIdResponse" message="tns:IGFSMaster_GetChunkServerId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLengthOfFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/GetLengthOfFile" message="tns:IGFSMaster_GetLengthOfFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/GetLengthOfFileResponse" message="tns:IGFSMaster_GetLengthOfFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBackUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGFSMaster/AddBackUp" message="tns:IGFSMaster_AddBackUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGFSMaster/AddBackUpResponse" message="tns:IGFSMaster_AddBackUp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IGFSMaster" type="tns:IGFSMaster">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogs">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChunkTable">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetChunkTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Write_GetChunkUuidAndChunkServerId">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/Write_GetChunkUuidAndChunkServerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WriteFileInfo">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/WriteFileInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Read_GetChunkUuidAndChunkServerId">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/Read_GetChunkUuidAndChunkServerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNumOfChunks">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetNumOfChunks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFileInfo">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetAllFileInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddChunkServer">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/AddChunkServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/Exists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileTable">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetFileTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeletedFile">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetDeletedFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChunkServerId">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetChunkServerId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLengthOfFile">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/GetLengthOfFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBackUp">
+      <soap:operation soapAction="http://tempuri.org/IGFSMaster/AddBackUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GFSMaster">
+    <wsdl:port name="BasicHttpBinding_IGFSMaster" binding="tns:BasicHttpBinding_IGFSMaster">
+      <soap:address location="http://localhost:60561/GFSMaster.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

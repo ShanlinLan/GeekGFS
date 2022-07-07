@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e6239121-7dcb-420c-99e2-04ee447c9377" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61241/GFSChunkServer.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GFSChunkServer.disco" MetadataType="Disco" ID="4fa9b785-d214-4124-9400-84125340fd81" SourceId="1" SourceUrl="http://localhost:61241/GFSChunkServer.svc?disco" />
+    <MetadataFile FileName="GFSChunkServer.wsdl" MetadataType="Wsdl" ID="19e10942-caae-4645-ae94-76ae9c551d51" SourceId="1" SourceUrl="http://localhost:61241/GFSChunkServer.svc?wsdl" />
+    <MetadataFile FileName="GFSChunkServer.xsd" MetadataType="Schema" ID="601ba608-16f5-43a6-be2b-8d2dc644f4fb" SourceId="1" SourceUrl="http://localhost:61241/GFSChunkServer.svc?xsd=xsd1" />
+    <MetadataFile FileName="GFSChunkServer1.xsd" MetadataType="Schema" ID="63166cde-6eb7-4407-b7ac-4fb7e91f79ba" SourceId="1" SourceUrl="http://localhost:61241/GFSChunkServer.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
